@@ -3,6 +3,7 @@ IMPLICIT NONE
 REAL::a,b,h,y_0,f_prime
 INTEGER::N,i
 real, allocatable :: x(:), y(:)
+!Intial Values
 a=0
 b=4
 h=0.1
@@ -30,4 +31,3 @@ REAL::x1,y1
   f_prime=-0.5*EXP(x1/2)*SIN(5*x1)+5*EXP(x1/2)*COS(5*x1)+y1
 return
 end function
-
