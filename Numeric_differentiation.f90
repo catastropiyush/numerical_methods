@@ -22,11 +22,11 @@ program deriv
   do i  =1,N
    y(i) = EXP(-(x(i)**2))
   end do
-  ! compute derivation
+  ! compute derivatives
   do i = 2, N-1
      dy(i) = (y(i+1) - y(i-1)) / (x(i+1) - x(i-1))  !derivative of function
   end do
-  ! compute first and last derivation using linear extrapolation
+  !Use linear extrapolation to determine derivatives at end points
   dy(1) = dy(2) + (dy(3)-dy(2))/(x(3)-x(2))*(x(1)-x(2))
   dy(N) = dy(N-1) + (dy(N-1)-dy(N-2))/(x(N-1)-x(N-2))*(x(N)-x(N-1))
   do i = 1, N
