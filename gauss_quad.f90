@@ -1,4 +1,6 @@
 !FORTRAN gauss code
+! This program uses Gauss Legendre Quadrature
+!
 program gaussquad
   implicit none
   ! declare variables
