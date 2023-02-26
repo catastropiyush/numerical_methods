@@ -1,4 +1,8 @@
 program Predictor
+! This Program solves an ODE using Adam Bashforth Predictor Corrector Method
+!  The initial values are taken using the Euler Method
+!
+
 IMPLICIT NONE
 REAL::a,b,h,y_0,f_prime
 INTEGER::N,i
