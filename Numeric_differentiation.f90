@@ -1,4 +1,6 @@
 !This code is used to calculate the first order derivative of a function
+!modularize this code
+
 program deriv
   implicit none
   ! declare variables
