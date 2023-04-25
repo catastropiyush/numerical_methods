@@ -1,4 +1,5 @@
 #Gauss Hermite quadrature
+#include plotting abilities inside the function
 import numpy as np
 import matplotlib.pyplot as plt
 def f(x):
