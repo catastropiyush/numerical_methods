@@ -17,6 +17,7 @@ for i in range(1,N):
   a[i] = (1/27)*(54-6*b[i-1]+c[i-1])
   b[i] = (1/15)*(72-6*a[i-1]-2*c[i-1])
   c[i] = (1/54)*(110-a[i-1]-b[i-1])
+  print("Iteration",i,":",a[i],b[i],c[i])
 
 plt.plot(a, label=r'$x_{1}$',linewidth=2.0,color='deeppink')
 plt.plot(b, label=r'$x_{2}$',linewidth=2.0,color='orchid')
