@@ -1,17 +1,31 @@
-#Jacobi's Method 
+#Jcobi Iteration 
+#Last update:Piyush
+import numpy as np
 import matplotlib.pyplot as plt
-x1=0;x2=0;x3=0;x4=0
-data_x1=[];data_x2=[];data_x3=[];data_x4=[]
-for i in range (10):
-    a=(6+x2-2*x3)/10
-    b=(25+x1+x3-3*x4)/11
-    c=(-11-2*x1+x2+x4)/10
-    d=(15-3*x2+x3)/8
-    x1=a;x2=b;x3=c;x4=d
-    data_x1.append(x1);data_x2.append(x2);data_x3.append(x3);data_x4.append(x4)
-print(x1,x2,x3,x4)
-plt.plot (data_x1, label=r'$x_{1}$')
-plt.plot (data_x2, label=r'$x_{2}$')
-plt.plot (data_x3, label=r'$x_{3}$')
-plt.plot (data_x4, label=r'$x_{4}$')
-plt.xlabel('Iterations');plt.legend();plt.grid();plt.show()
+N=10 #number of iterations
+# 27x+6y-z=54
+# 6x+15y+2z=72
+# x+y+54z=110
+a=[0]*N
+b=[0]*N
+c=[0]*N
+
+a[0] = 10.0  
+b[0] = 2.0  
+c[0] = 3.0
+for i in range(1,N):
+  a[i] = (1/27)*(54-6*b[i-1]+c[i-1])
+  b[i] = (1/15)*(72-6*a[i-1]-2*c[i-1])
+  c[i] = (1/54)*(110-a[i-1]-b[i-1])
+
+plt.plot(a, label=r'$x_{1}$',linewidth=2.0,color='deeppink')
+plt.plot(b, label=r'$x_{2}$',linewidth=2.0,color='orchid')
+plt.plot(c, label=r'$x_{3}$',linewidth=2.0,color='cornflowerblue')
+plt.xlabel(r'$n$')
+plt.grid(color='lightgrey', linestyle='-', linewidth=0.5)
+plt.legend()
+
+
+print('x',a[-1])
+print('y',b[-1])
+print('z',c[-1])
