@@ -1,4 +1,5 @@
 #Diagonal Dominance checker
+#make a code for determining the spectral radius of a matrix
 import numpy as np 
 import matplotlib.pyplot as plt
 A = np.array([[6,-2,10],[1,-5,2],[-1,2,8]])
