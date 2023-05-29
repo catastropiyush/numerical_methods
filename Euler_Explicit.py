@@ -2,9 +2,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 x = np.linspace(0,4,100)             
-def euler_explicit(f_prime, y_0, a, b, h):#defining the euler method 
-    N=int((b-a)/h)        #Number of steps
-    x = a ; y = y_0       #Initial Values to the equation y(0) and x(0)
+def euler_explicit(f_prime, y_0, a, b, h):  #defining the euler method 
+    N=int((b-a)/h)             #Number of steps
+    x = a ; y = y_0             #Initial Values to the equation y(0) and x(0)
     x_out,y_out =[],[]
     for i in range(N):
         y = y + h*f_prime(x, y)  #y_n+1 = y_n + h * f
