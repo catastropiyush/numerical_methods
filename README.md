@@ -1,3 +1,2 @@
-# chocos (˶◕‿◕˶✿)
-Computational physics numerical methods codes
-These codes were part of my masters curriculum.
+# Numerical Methods
+Implementation of several numerical methods part of my masters curriculum.
